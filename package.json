@@ -1,5 +1,5 @@
 {
-  "name": "mongoose-paginator",
+  "name": "@dakshmiglani/mp",
   "version": "0.0.1",
   "description": "Paginator for mongoose which works.",
   "main": "index.js",
