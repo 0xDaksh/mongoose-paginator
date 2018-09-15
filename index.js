@@ -6,13 +6,16 @@ function paginate(query, options) {
   const limit = options.hasOwnProperty('limit') ? options.limit : 10;
   const page = options.page || 1;
   const skip = options.hasOwnProperty('page') ? (page - 1) * limit : 0;
+  const populate = options.populate;
   const docs = limit
     ? this.find(query)
         .sort(sort)
         .skip(skip)
         .limit(limit)
+        .populate(populate || "")
         .exec()
     : query.exec();
+
   const countDocuments = this.countDocuments(query).exec();
 
   return Promise.all([docs, countDocuments]).then(function(values) {
