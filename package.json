@@ -1,6 +1,6 @@
 {
-  "name": "mongoose-p",
-  "version": "0.0.1",
+  "name": "mongoose-mp",
+  "version": "0.0.2",
   "description": "Paginator for mongoose which works.",
   "main": "index.js",
   "scripts": {
